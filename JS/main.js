@@ -19,5 +19,8 @@ fetch("https://weatherapi-com.p.rapidapi.com/current.json?q=80140%20culiacan", {
 
 
 function EXTRACTOR(datos) {
-    console.log(datos);
+	const CLIMA = document.getElementById("TEMPERATURA");
+	const temperatura = datos.current.temp_c;
+
+	CLIMA.innerText = temperatura;
 }
