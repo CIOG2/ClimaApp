@@ -6,21 +6,41 @@ fetch("https://weatherapi-com.p.rapidapi.com/current.json?q=80140%20culiacan", {
 	}
 })
 .then(response => {
-    console.log('hola');
     response.json().then(function(data) {
         EXTRACTOR(data);
     });
 })
 .catch(err => {
-	console.error(err);
+	ERROR();
 });
 
 
-
-
 function EXTRACTOR(datos) {
-	const CLIMA = document.getElementById("TEMPERATURA");
-	const temperatura = datos.current.temp_c;
+	let temperatura = datos.current.temp_c;
+	let icono = datos.current.condition.icon;
+	let clima = document.getElementById("TEMPERATURA");
+	let punto = document.getElementById("PUNTO-GRADOS");
+	let imagen_cliama = document.getElementById("imagen-clima");
 
-	CLIMA.innerText = temperatura;
+
+
+	imagen_cliama.src = icono;
+	clima.innerText = temperatura;
+	punto.innerText = "°";	
+
+
+
+	console.log(datos);
+}
+
+
+
+
+
+
+
+
+function ERROR() {
+	const ERROR = document.getElementById("PUNTO-GRADOS");
+	ERROR.innerText = "Refresh page";
 }
