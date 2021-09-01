@@ -26,7 +26,11 @@ function EXTRACTOR(datos) {
 
 	imagen_cliama.src = icono;
 	clima.innerText = temperatura;
-	punto.innerText = "°";	
+	punto.innerText = "°";
+	
+
+
+	console.log(datos);
 }
 
 

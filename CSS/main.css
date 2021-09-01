@@ -14,10 +14,60 @@ html{
     align-items: center;
     flex-direction: column;
 }
+header{
+    width: 100%;
+    height: 15vh;
+    background-color: purple;
+}
+.header__section{
+    width: 100%;
+    height: 100%;
+}
+.header__section--buscar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    height: 40px;
+    max-width: 300px;
+    background-color: rgba(255, 255, 255, 0.459);
+    border: 2px solid white;
+    border-radius: 20px;
+}
+.header__section--buscar input{
+    width: 80%;
+    height: 100%;
+    padding-left: 15px;
+    font-size: 1.9rem;
+    color: white;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-radius: 20px 0 0 20px;
+
+}
+.header__section--buscar input::placeholder{
+    font-size: 1.5rem;
+    color: white;
+}
+.header__section--buscar button{
+    width: 20%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+}
+.header__section--buscar button img{
+    width: 27px;
+    height: 20px;
+    margin-top: 5px;
+    transform: rotatey(200deg);
+}
+
+
 
 .main{
     width: 100%;
-    height: 100vh;
+    height: 85vh;
     background-color: purple;
 }
 .main__section{
