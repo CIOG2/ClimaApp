@@ -8,9 +8,6 @@ html{
     font-family: 'Open Sans', sans-serif;
 }
 
-body{
-    background-color: burlywood;
-}
 .flex{
     display: flex;
     justify-content: center;
