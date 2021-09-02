@@ -14,17 +14,20 @@
     <header class="header">
         <section class="header__section flex">
             <div class="header__section--buscar">
-                <input type="text" placeholder="Ciudad">
-                <button onclick=""><img src="https://i.ibb.co/d5NM4M1/Buscar-Lupa.png" alt=""></button>
+                <input id="CIUDAD" type="text" placeholder="Ciudad">
+                <button onclick="extraerCiudad()"><img src="https://i.ibb.co/d5NM4M1/Buscar-Lupa.png" alt=""></button>
             </div>
         </section>
     </header>
     <main class="main flex">
         <section class="main__section flex">
-            <div class="main__ection--clima-actual">
+            <div class="main__section--ubicacion flex">
+                <h2 id="UBICACION"></h2>
+            </div>
+            <div class="main__section--clima-actual">
                 <h1 id="TEMPERATURA"></h1><p id="PUNTO-GRADOS"></p>
             </div>
-            <div class="main__ection--clima-icons flex">
+            <div class="main__section--clima-icons flex">
                 <img id="imagen-clima" src="" alt="imagen del clima"> 
             </div>
         </section>
@@ -37,5 +40,6 @@
 
     </footer>
 </body> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 <script src="JS/main.js"></script>
 </html>

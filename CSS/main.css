@@ -74,20 +74,30 @@ header{
     width: 100%;
     height: 50vh;
 }
+.main__section--ubicacion{
+    width: 100%;
+    height: 20%;
+}
+.main__section--ubicacion h2{
+    font-size: 2rem;
+    padding-top: 20px;
+    color: white;
+}
 
-.main__ection--clima-actual{
+
+.main__section--clima-actual{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 50%;
+    height: 40%;
 }
-.main__ection--clima-actual h1{
+.main__section--clima-actual h1{
     font-size: 7rem;
     color: white;
     padding-left: 13px;
 }
-.main__ection--clima-actual p{
+.main__section--clima-actual p{
     font-size: 4rem;
     padding-bottom: 20px;
     color: white;
@@ -99,9 +109,9 @@ header{
 
 
 
-.main__ection--clima-actual img{
-    width: 40px;
-    height: 40px;
+.main__section--clima-icons img{
+    width: 60px;
+    height: 60px;
 }
 
 
