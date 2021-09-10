@@ -30,15 +30,23 @@ function EXTRACTOR(datos) {
 		datos.location.region,
 		datos.location.country,
 	]
+	let climaCondicion = datos.current.condition.text;
+
 	let ubicacion = document.getElementById("UBICACION");
 	let clima = document.getElementById("TEMPERATURA");
 	let punto = document.getElementById("PUNTO-GRADOS");
-	let imagen_clima = document.getElementById("imagen-clima");
+	let imagenClima = document.getElementById("imagen-clima");
+	let estadoClima = document.getElementById("estado-clima");
 
-	imagen_clima.src = icono;
+	imagenClima.src = icono;
 	clima.innerText = temperatura;
 	punto.innerText = "°";
 	ubicacion.innerText = `${ciudadEstadoPais[0]} ${ciudadEstadoPais[1]}, ${ciudadEstadoPais[2]}`;
+	estadoClima.innerText = Traductor(climaCondicion);
+
+
+
+console.log(datos);
 }
 
 function ERROR(ciudad) {	
@@ -60,7 +68,32 @@ function extraerCiudad() {
 	}
 }
 
-
+function Traductor(climaCondicion) {
+	if (climaCondicion == "Partly cloudy") {
+			return "Parcialmente nublado";
+		} else if(climaCondicion == "Light rain shower"){
+				return "Lluvia ligera";
+			} else if(climaCondicion == "lluvia irregular"){
+				return "lluvia irregular";
+				} else if(climaCondicion == "Sunny"){
+					return "Soleado";
+					} else if(climaCondicion == "Clear"){
+						return "Despejado";
+						} else if(climaCondicion == "Patchy light rain with thunder"){
+							return "Lluvia irregular con truenos";
+							} else if(climaCondicion == "Patchy rain possible"){
+								return "Lluvia irregular";
+								} else if(climaCondicion == "Overcast"){
+									return "Nublado";
+									} else if(climaCondicion == "Mist"){
+										return "Bruma";
+										} else if(climaCondicion == "Mist"){
+											return "Bruma";
+											}			
+		else {
+		return climaCondicion;
+	}
+}
 
 
 CLIMA("culiacan");

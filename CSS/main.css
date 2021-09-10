@@ -103,18 +103,20 @@ header{
     color: white;
 }
 
-
-
-
-
-
+.main__section--clima-icons{
+    flex-direction: row;
+}
 
 .main__section--clima-icons img{
     width: 60px;
     height: 60px;
 }
 
-
+.main__section--clima-icons p{
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;    
+}
 
 
 
